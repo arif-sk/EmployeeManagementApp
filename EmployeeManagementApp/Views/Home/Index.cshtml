@@ -1,0 +1,22 @@
+﻿@model IEnumerable<EmployeeManagementApp.Models.Employee>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.PageTitle</h2>
+<div class="card-deck">
+    @foreach (var e in Model)
+    {
+        <div class="card m-3">
+            <div class="card-header">
+                <h3>@e.Name</h3>
+            </div>
+            <img class="card-img-top" src="~/images/human.png" />
+            <div class="card-footer text-center">
+                <a href="/Home/Details/@e.Id" class="btn btn-primary">View</a>
+                <a href="#" class="btn btn-primary">Edit</a>
+                <a href="#" class="btn btn-primary">Delete</a>
+            </div>
+        </div>
+    }
+</div>

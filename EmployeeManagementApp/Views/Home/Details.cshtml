@@ -1,0 +1,26 @@
+﻿@model EmployeeManagementApp.Models.Employee
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h3>@ViewBag.PageTitle</h3>
+<div class="row justify-content-center m-3">
+    <div class="col-sm-8">
+        <div class="card">
+            <div class="card-header">
+                <h1>@Model.Name</h1>
+            </div>
+            <div class="card-body text-center">
+                <img class="card-img-top" src="~/images/human.png"/>
+
+                <h4>Employee Id: @Model.Id</h4>
+                <h4>Employee Email: @Model.Email</h4>
+                <h4>Employee Department: @Model.Department</h4>
+            </div>
+            <div class="card-footer text-center">
+                <a href="~/Home/Index" class="btn btn-primary">Back</a>
+                <a href="#" class="btn btn-primary">Edit</a>
+                <a href="#" class="btn btn-primary">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>
