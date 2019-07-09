@@ -34,5 +34,10 @@ namespace EmployeeManagementApp.Controllers
             var emp = _employeeRepository.GetEmployee(id ?? 1);
             return View(emp);
         }
+        [Route("[action]")]
+        public ActionResult Create()
+        {
+            return View();
+        }
     }
 }
