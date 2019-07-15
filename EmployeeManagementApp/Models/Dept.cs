@@ -7,7 +7,6 @@ namespace EmployeeManagementApp.Models
 {
     public enum Dept
     {
-        None,
         IT,
         Network,
         HR,

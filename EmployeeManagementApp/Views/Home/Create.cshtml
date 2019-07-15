@@ -7,14 +7,19 @@
     <div class="form-group">
         <label asp-for="Name"></label>
         <input class="form-control" asp-for="Name" />
+        <span asp-validation-for="Name" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Email"></label>
         <input class="form-control" asp-for="Email" />
+        <span asp-validation-for="Email" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Department"></label>
-        <select class="form-control" asp-for="Department" asp-items="Html.GetEnumSelectList<EmployeeManagementApp.Models.Dept>()"></select>
+        <select class="form-control" asp-for="Department" asp-items="Html.GetEnumSelectList<EmployeeManagementApp.Models.Dept>()">
+            <option value="">Please Select</option>
+        </select>
+        <span asp-validation-for="Department" class="text-danger"></span>
     </div>
     <div class="form-group">
         <button type="submit">Register</button>
