@@ -39,5 +39,10 @@ namespace EmployeeManagementApp.Controllers
         {
             return View();
         }
+        [HttpPost("[action]")]
+        public ActionResult Create(Employee employee)
+        {
+            return View();
+        }
     }
 }
