@@ -9,5 +9,6 @@ namespace EmployeeManagementApp.Models
     {
         List<Employee> GetEmployee();
         Employee GetEmployee(int id);
+        Employee Add(Employee employee);
     }
 }
