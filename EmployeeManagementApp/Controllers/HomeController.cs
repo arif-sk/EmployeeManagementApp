@@ -39,6 +39,12 @@ namespace EmployeeManagementApp.Controllers
         {
             return View();
         }
+        [Route("[action]")]
+        public IActionResult Delete(int id)
+        {
+            _employeeRepository.Delete(id);
+            return RedirectToAction("Index");
+        }
         [HttpPost("[action]")]
         public IActionResult Create(Employee employee)
         {

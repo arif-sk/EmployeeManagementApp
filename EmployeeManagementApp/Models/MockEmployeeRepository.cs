@@ -20,8 +20,25 @@ namespace EmployeeManagementApp.Models
 
         public Employee Add(Employee employee)
         {
-            employee.Id = employees.Max(x => x.Id) + 1;
+            if (employees.Count > 0)
+            {
+                employee.Id = employees.Max(x => x.Id) + 1;
+            }
+            else
+            {
+                employee.Id = 1;
+            }
             employees.Add(employee);
+            return employee;
+        }
+
+        public Employee Delete(int id)
+        {
+            Employee employee = employees.FirstOrDefault(e => e.Id == id);
+            if (employee != null)
+            {
+                employees.Remove(employee);
+            }
             return employee;
         }
 
@@ -34,5 +51,16 @@ namespace EmployeeManagementApp.Models
             return employees.FirstOrDefault(e => e.Id == id);
         }
 
+        public Employee Update(Employee updateEmployee)
+        {
+            var employee = employees.FirstOrDefault(e => e.Id == updateEmployee.Id);
+            if (employee != null)
+            {
+                employee.Name = updateEmployee.Name;
+                employee.Email = updateEmployee.Email;
+                employee.Department = updateEmployee.Department;
+            }
+            return employee;
+        }
     }
 }

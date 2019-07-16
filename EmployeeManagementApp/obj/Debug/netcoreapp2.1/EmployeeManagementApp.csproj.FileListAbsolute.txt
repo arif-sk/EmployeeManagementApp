@@ -5,6 +5,7 @@ E:\Dotnet Core 2 Application\EmployeeManagementApp\EmployeeManagementApp\bin\Deb
 E:\Dotnet Core 2 Application\EmployeeManagementApp\EmployeeManagementApp\bin\Debug\netcoreapp2.1\EmployeeManagementApp.pdb
 E:\Dotnet Core 2 Application\EmployeeManagementApp\EmployeeManagementApp\bin\Debug\netcoreapp2.1\EmployeeManagementApp.Views.dll
 E:\Dotnet Core 2 Application\EmployeeManagementApp\EmployeeManagementApp\bin\Debug\netcoreapp2.1\EmployeeManagementApp.Views.pdb
+E:\Dotnet Core 2 Application\EmployeeManagementApp\EmployeeManagementApp\obj\Debug\netcoreapp2.1\EmployeeManagementApp.csprojAssemblyReference.cache
 E:\Dotnet Core 2 Application\EmployeeManagementApp\EmployeeManagementApp\obj\Debug\netcoreapp2.1\EmployeeManagementApp.csproj.CoreCompileInputs.cache
 E:\Dotnet Core 2 Application\EmployeeManagementApp\EmployeeManagementApp\obj\Debug\netcoreapp2.1\EmployeeManagementApp.RazorAssemblyInfo.cache
 E:\Dotnet Core 2 Application\EmployeeManagementApp\EmployeeManagementApp\obj\Debug\netcoreapp2.1\EmployeeManagementApp.RazorAssemblyInfo.cs

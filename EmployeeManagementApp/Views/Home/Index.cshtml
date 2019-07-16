@@ -13,8 +13,8 @@
             <img class="card-img-top" src="~/images/human.png" asp-append-version="true" />
             <div class="card-footer text-center">
                 <a asp-controller="Home" asp-action="Details" asp-route-id="@e.Id" class="btn btn-primary m-1">View</a>
-                <a href="#" class="btn btn-primary m-1">Edit</a>
-                <a href="#" class="btn btn-primary m-1">Delete</a>
+                <a  class="btn btn-primary m-1">Edit</a>
+                <a class="btn btn-primary m-1" asp-controller="Home" asp-action="Delete" asp-route-id="@e.Id">Delete</a>
             </div>
         </div>
     }
