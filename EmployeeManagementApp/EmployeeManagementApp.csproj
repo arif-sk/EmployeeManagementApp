@@ -5,6 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20190716181555_add photo path.cs" />
+    <Compile Remove="Migrations\20190716181555_add photo path.Designer.cs" />
+    <Compile Remove="Migrations\20190716181715_AddPhotoPath.cs" />
+    <Compile Remove="Migrations\20190716181715_AddPhotoPath.Designer.cs" />
+    <Compile Remove="Migrations\20190716182838_PhotoPathAdded.cs" />
+    <Compile Remove="Migrations\20190716182838_PhotoPathAdded.Designer.cs" />
+    <Compile Remove="Migrations\20190716183101_SomeTextAdded.cs" />
+    <Compile Remove="Migrations\20190716183101_SomeTextAdded.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
   </ItemGroup>
