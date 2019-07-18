@@ -18,6 +18,6 @@ namespace EmployeeManagementApp.ViewModels
         public string Email { get; set; }
         [Required(ErrorMessage = "Department is Required")]
         public Dept? Department { get; set; }
-        public IFormFile Photo { get; set; }
+        public List<IFormFile> Photos { get; set; }
     }
 }

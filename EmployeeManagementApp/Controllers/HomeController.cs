@@ -56,23 +56,37 @@ namespace EmployeeManagementApp.Controllers
             if (ModelState.IsValid)
             {
                 string uniqueFileName = "";
-                if (model.Photo != null)
+                if (model.Photos != null && model.Photos.Count > 0)
                 {
-                   string uploadsFolder =  Path.Combine(_hostingEnvironment.WebRootPath, "images");
-                    uniqueFileName =  Guid.NewGuid().ToString() + "_" + model.Photo.FileName;
-                    string filePath = Path.Combine(uploadsFolder, uniqueFileName);
-                    model.Photo.CopyTo(new FileStream(filePath, FileMode.Create));
+                    foreach (var photo in model.Photos)
+                    {
+                        string uploadsFolder = Path.Combine(_hostingEnvironment.WebRootPath, "images");
+                        uniqueFileName = Guid.NewGuid().ToString() + "_" + photo.FileName;
+                        string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+                        photo.CopyTo(new FileStream(filePath, FileMode.Create));
+                    }
                 }
                 Employee newEmployee = new Employee
                 {
                     Name = model.Name,
                     Email = model.Email,
                     Department = model.Department,
-                    PhotoPath = uniqueFileName
+                    PhotoPath = uniqueFileName == "" ? null : uniqueFileName
                 };
                 _employeeRepository.Add(newEmployee);
                 return RedirectToAction("Details", new { id = newEmployee.Id });
             }
+            return View();
+        }
+        [Route("action")]
+        public IActionResult Update(int id)
+        {
+            return View();
+        }
+        [HttpPost]
+        [Route("action")]
+        public IActionResult Update(EmployeeCreateViewModel model)
+        {
             return View();
         }
     }
