@@ -12,6 +12,8 @@
               asp-fallback-test-class="sr-only"
               asp-fallback-test-property="position" asp-fallback-test-value="absolute" asp-suppress-fallback-integrity="true">
     </environment>
+    <script src="~/lib/jquery/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.js"></script>
     <link href="~/css/site.css" rel="stylesheet" />
 </head>
 <body>
@@ -36,7 +38,10 @@
     <div class="container">
         @RenderBody()
     </div>
-    <script src="~/lib/jquery/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/js/bootstrap.js"></script>
+    @if (IsSectionDefined("Scripts"))
+    {
+        @RenderSection("Scripts",required:true)
+    }
+    
 </body>
 </html>
